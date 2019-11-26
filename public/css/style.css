@@ -1,0 +1,56 @@
+
+@font-face {
+  font-family: BigFont;
+  src: url(../font/OpenSans-Italic.ttf);
+}
+
+@font-face {
+  font-family: Normal;
+  src: url(../font/OpenSans-Regular.ttf);
+}
+
+body {
+  overflow: hidden;
+}
+
+.welcome {
+  background: black;
+  height: 100vh;
+  background:url("../img/cover5.jpg");
+  background-size: cover;
+  padding: 0 !important;
+
+}
+.welcome .darken {
+  background: rgba(35, 17, 58, 0.6);
+  height: 100vh;
+  width: 100%;
+
+}
+.wlm-presentation {
+  margin-top: 10%;
+
+}
+
+.wlm-presentation p.title-known {
+  font-size: 60px;
+  font-family: BigFont;
+  margin:1px 0 0 0;
+  color: #eeeeee;
+  display: none;
+}
+.wlm_img img{
+	height: 200px;
+	width: 200px;
+	border-radius: 100%;
+	display: none;
+}
+
+@media (max-width:700px){
+	 .wlm-presentation p.title-known {
+	 	font-size: 40px;
+	 }
+	.wlm-presentation {
+	  margin-top: 30%;
+	}
+}
