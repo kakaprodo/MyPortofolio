@@ -29,7 +29,7 @@ export const H = {
 	},
 	giveActive(currentHash,expectHash){//browser has
       if(currentHash === null) return 'menu-active';
-      console.log(currentHash.toLowerCase() , expectHash.toLowerCase(),currentHash.toLowerCase() === expectHash.toLowerCase());
+      
       return currentHash.toLowerCase() === expectHash.toLowerCase()?'menu-active':'';
 	},
 	
