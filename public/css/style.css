@@ -11,11 +11,23 @@
 
 :root{
   --foreGround: #eeeeee;
-}
-body {
-  overflow: hidden;
+  --font-size : 20px;
+  --font-size-sub : 20px;
+  --app-family : Normal;
+  --app-color: rgba(0, 0, 0, 0.8);
 }
 
+body {
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+.pad15{
+  padding: 15px;
+}
+.pad10{
+  padding: 10px;
+}
 
 .nav {
   position: absolute;
@@ -25,6 +37,8 @@ body {
   background: rgba(35, 17, 58, 0.8);
   
 }
+
+
 
 .nav ul{
   height: 50vh;
@@ -53,9 +67,13 @@ body {
 .nav ul li a p{
   font-size: 30px;
   font-family: BigFont;
-  color: var(--app-color);
+  color: var(--foreGround);
   margin:0 0 -15px 0px !important;
   transition: font-size 0.3s linear 0.3s;
+}
+
+.fadeIn, .hide-show {
+  /*display: none;*/
 }
 
 .nav ul li a span{
@@ -73,6 +91,10 @@ body {
   cursor: pointer;
 }
 
+ .nav ul li a:active {
+   background: rgba(0, 0, 0, 0.5);
+ }
+
 
 .welcome {
   background: black;
@@ -83,9 +105,11 @@ body {
 
 }
 .welcome .darken {
-  background: rgba(35, 17, 58, 0.6);
+  background: rgba(0, 0, 0, .8);
   height: 100vh;
   width: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
 
 }
 .div-nav-body {
@@ -98,13 +122,13 @@ body {
   font-family: BigFont;
   margin:1px 0 0 0;
   color: var(--foreGround);
-  display: none;
+  /*display: none;*/
 }
 .wlm_img img{
 	height: 200px;
 	width: 200px;
 	border-radius: 100%;
-	display: none;
+	/*display: none;*/
 }
 
 .list-unstyled {
@@ -116,6 +140,68 @@ a {
   text-decoration: none;
 }
 
+
+.abt_img img{
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.abt-info p.title-known, .abt-education ul li {
+  color: var(--foreGround);
+  font-size: var(--font-size);
+  line-height: 1.5em;
+  font-family: Normal;
+  margin-top:1px !important;
+  text-align: justify-all;
+
+}
+
+.card-title {
+  font-size:30px !important;
+  color: var(--foreGround) !important;
+  font-family: Normal;
+}
+
+.center{
+  text-align: center !important;
+}
+
+.title-simple {
+  color: var(--foreGround);
+  font-size: var(--font-size);
+  margin-bottom: 5px;
+  line-height: 1.5em;
+  font-family: Normal;
+  margin-bottom: 5px;
+  margin-top:1px !important;
+  text-align: justify-all;
+}
+
+.abt-education ul li {
+  font-size: 17px !important;
+  margin-bottom: auto !important;
+
+ }
+
+.skills-presentation .card-content{
+  padding:0 15px 15px 15px !important;
+  text-align: center;
+}
+
+.project-presentation{
+  margin-top:-50px !important;
+}
+
+.project-presentation .project-list{
+  height: 300px;
+}
+
+@media (max-width:768px){
+  .project-presentation .project-list{
+    height: auto !important;
+  }
+}
+
 @media (max-width:700px){
 	 .wlm-presentation p.title-known {
 	 	font-size: 40px;
@@ -125,7 +211,8 @@ a {
 	}
 }
 
-@media (max-width:500px) {
+@media (max-width:748px) {
+
   .wlm-presentation p.title-known {
     font-size: 25px;
   }
@@ -147,6 +234,7 @@ a {
     z-index: 3;
     height: auto;
     
+    
    }
   .nav ul{
     height: auto;
@@ -164,4 +252,131 @@ a {
 }
 
 
+.app-opacity {
+  /*background: rgba(35, 17, 58, 0.8);*/
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: none;
+  padding: 10px !important;
+}
 
+
+
+
+.btn{
+   padding:7px 10px 7px 10px;
+   border-radius: 5px;
+   border:1px solid transparent;
+   font-family: Normal;
+   background: rgba(0, 0, 0, 0.3);
+   color:white;
+   transition: background 0.5s linear,
+                font-size 0.4s linear,
+                border 0.4s linear;
+   font-size:17px;
+ }
+
+ .badge{
+  padding:2px 10px 2px 10px;
+  border-radius: 2px;
+  border:1px solid transparent;
+  font-family: var(--app-family);
+  background: var(--app_color) ;
+  color:white;
+  cursor:pointer;
+  margin:2px;
+  
+ }
+
+ .btn.auth,.badge.auth{
+   color:var(--brand-color);
+   background: white;
+   border:1px solid var(--brand-color);
+   
+ }
+
+
+ .btn.btn-event{
+  border-radius:30px !important;
+  padding:15px 30px 15px 30px;
+  font-size:17px;
+  
+}
+
+ .btn.red-btn,.badge.red{
+  color:rgb(240, 110, 110);
+  background: white;
+  border:1px solid rgb(240, 110, 110);
+  
+}
+
+
+
+.btn.green-btn,.badge.green{
+  color:rgb(67, 146, 67);
+  background: white;
+  border:1px solid rgb(67, 146, 67);
+  
+}
+
+.badge.no-border{
+  border:none;
+}
+
+ .btn .full{
+   width:100%;
+ }
+
+ .btn .medium{
+   padding:10px;
+ }
+ 
+ 
+ .btn:focus {
+  border-color:var(--app-color); 
+  outline: 0;
+  box-shadow: 1px 1px 1px  var(--app-color);
+ 
+ }
+
+ .btn:active{
+ 
+  box-shadow: 0 10px 10px 0 rgba(59, 46, 46, 0.5) inset;
+ }
+ .btn:focus{
+  border:1px solid var(--app_color);
+ }
+
+ .btn:hover {
+  cursor: pointer;
+  background:  white ;
+  color:#7408f8;
+  font-weight: bold;
+  font-size: 13px;
+  border:1px solid #7408f8;
+ 
+ }
+
+ .btn.auth:hover {
+  cursor: pointer;
+  background:  #7408f8;
+  color:white;
+  font-weight: bold;
+  border:1px solid #7408f8;
+ 
+ }
+
+
+ .btn.red-btn:hover{
+  color:white;
+  background: rgb(240, 110, 110);
+  border:1px solid rgb(240, 110, 110);
+  
+}
+
+.btn.green-btn:hover{
+  color: white;
+  background:rgb(67, 146, 67);
+  border:1px solid rgb(67, 146, 67);
+  
+}

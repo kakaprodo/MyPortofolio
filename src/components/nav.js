@@ -1,11 +1,14 @@
 import React from 'react';
-import H from '../helper/all';
+import {H} from '../helper/all';
 import { Link } from "react-router-dom";
 
 const { route_name: rn } = H;
 export default class Nav extends React.Component
 {
+
+
   render() {
+
   	return (
        <div className="nav">
           <ul className="list-unstyled">
@@ -30,13 +33,13 @@ export default class Nav extends React.Component
           	 <li> 
                <Link to={ rn.projects } >
                  <p> <i className="fa fa-umbrella"></i> </p> 
-                 <span> Project </span>
+                 <span> Projects </span>
                </Link> 
              </li>
           	 <li> 
-               <Link to={ rn.motivation } >
-                 <p> <i className="fa fa-plug"></i> </p> 
-                 <span> Motivation </span> 
+               <Link to={ rn.contact } >
+                 <p> <i className="fa fa-phone"></i> </p> 
+                 <span> Contact </span> 
                </Link> 
              </li>
           	 

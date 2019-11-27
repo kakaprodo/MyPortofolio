@@ -5,13 +5,14 @@ import Nav from './components/nav';
 
 const UserContext = React.createContext({user:{}});
 class App extends React.Component{
-   constructor(props) {
+  constructor(props) {
      super(props);
    
      this.state = {
      	  user:{name:'prodo',age:12}
      };
-   }
+  }
+ 
   
   render() {
   	return (
