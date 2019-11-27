@@ -3,7 +3,6 @@ import { HashRouter as Router } from "react-router-dom"
 import BasicRoutes from './router/index';
 import Nav from './components/nav';
 
-const UserContext = React.createContext({user:{}});
 class App extends React.Component{
   constructor(props) {
      super(props);

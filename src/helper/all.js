@@ -15,6 +15,21 @@ export const H = {
 	animeRand: () => {
 		const animations = ['fadeIn', 'show', 'slideDown'];
 		return animations[H.random(0,2)];
+	},
+	setMenuActive(model){
+	    $(window).on('hashchange', (e) => {
+	      const hash = window.location.hash.split('#');
+	      if (model) {
+	      	model.setState({menu_active:hash[1]});
+	      }
+	    });
+	    let hash = window.location.hash.split('#');
+	    if (model) return model.setState({menu_active:hash[1]});
+	},
+	giveActive(currentHash,expectHash){//browser has
+      if(currentHash === null) return 'menu-active';
+      console.log(currentHash.toLowerCase() , expectHash.toLowerCase(),currentHash.toLowerCase() === expectHash.toLowerCase());
+      return currentHash.toLowerCase() === expectHash.toLowerCase()?'menu-active':'';
 	}
 
 }
