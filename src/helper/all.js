@@ -1,12 +1,13 @@
 import $ from 'jquery';
 import routeName from './route_name';
 import myInfo from './mockData';
-
+let appPath = window.location.hash.split('#');
 
 export const H = {
 	$:$,
 	route_name:routeName,
 	myInfo: myInfo,
+	APP_PATH:appPath[0],
 	random: (min,max) => {
       min = Math.ceil(min);
       max = Math.floor(max);
@@ -30,6 +31,7 @@ export const H = {
       if(currentHash === null) return 'menu-active';
       console.log(currentHash.toLowerCase() , expectHash.toLowerCase(),currentHash.toLowerCase() === expectHash.toLowerCase());
       return currentHash.toLowerCase() === expectHash.toLowerCase()?'menu-active':'';
-	}
+	},
+	
 
 }

@@ -18,6 +18,7 @@ export default class Nav extends React.Component
   }
   render() {
     const { menu_active:ma } =this.state;
+  
   	return (
        <div className="nav">
           <ul className="list-unstyled">
