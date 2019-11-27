@@ -1,6 +1,7 @@
 import React from 'react';
-import './App.css';
-import Welcome from './components/welcome';
+import { BrowserRouter as Router } from "react-router-dom"
+import BasicRoutes from './router/index';
+import Nav from './components/nav';
 
 const UserContext = React.createContext({user:{}});
 class App extends React.Component{
@@ -15,7 +16,15 @@ class App extends React.Component{
   render() {
   	return (
         <div className="row">
-          <Welcome />
+            <div className="welcome col s12">
+               <div className="darken col s12"> 
+                 <Router>
+                    <Nav />
+                    <div className="div-nav-body"></div>
+                    <BasicRoutes />
+                 </Router>
+               </div>
+            </div>
         </div>
       );
   	

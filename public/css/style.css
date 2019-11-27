@@ -6,12 +6,73 @@
 
 @font-face {
   font-family: Normal;
-  src: url(../font/OpenSans-Regular.ttf);
+  src: url(../font/Normal.ttf);
 }
 
+:root{
+  --foreGround: #eeeeee;
+}
 body {
   overflow: hidden;
 }
+
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background: rgba(35, 17, 58, 0.8);
+  
+}
+
+.nav ul{
+  height: 50vh;
+  margin-top: 20vh;
+
+}
+
+.nav ul{
+  line-height: 3em;
+  text-align: center;
+}
+
+.nav li {
+  background: transparent;
+  transition: background 0.3s linear 0.3s;
+}
+
+
+.nav ul li a{
+  font-family: Normal;
+  font-size: 15px;
+  color: white;
+}
+
+
+.nav ul li a p{
+  font-size: 30px;
+  font-family: BigFont;
+  color: var(--app-color);
+  margin:0 0 -15px 0px !important;
+  transition: font-size 0.3s linear 0.3s;
+}
+
+.nav ul li a span{
+  padding:0 5px 0 5px;
+  color: white;
+}
+
+.nav ul li:hover > a p {
+  font-size: 35px;
+}
+
+
+.nav ul li:hover {
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
 
 .welcome {
   background: black;
@@ -27,16 +88,16 @@ body {
   width: 100%;
 
 }
-.wlm-presentation {
+.div-nav-body {
   margin-top: 10%;
 
 }
 
 .wlm-presentation p.title-known {
-  font-size: 60px;
+  font-size: 50px;
   font-family: BigFont;
   margin:1px 0 0 0;
-  color: #eeeeee;
+  color: var(--foreGround);
   display: none;
 }
 .wlm_img img{
@@ -46,11 +107,61 @@ body {
 	display: none;
 }
 
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 @media (max-width:700px){
 	 .wlm-presentation p.title-known {
 	 	font-size: 40px;
 	 }
-	.wlm-presentation {
+	.div-nav-body {
 	  margin-top: 30%;
 	}
 }
+
+@media (max-width:500px) {
+  .wlm-presentation p.title-known {
+    font-size: 25px;
+  }
+
+  .div-nav-body {
+    margin-top: 20vh;
+  }
+  .wlm_img img{
+    height: 150px;
+    width: 150px;
+   }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width:100%;
+    z-index: 3;
+    height: auto;
+    
+   }
+  .nav ul{
+    height: auto;
+    margin-top:0px;
+    margin-bottom: -5px !important;
+  }
+
+  .nav ul li{
+    display: inline-block;
+    width:20%;
+  }
+  .nav ul li a{
+   padding-top:10px;
+  }
+}
+
+
+
